@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Jockey One', sans-serif; }
+
+.main-section {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10rem repeat(4, 1fr) 10rem;
+  grid-template-rows: 10rem repeat(1, 1fr) 10rem;
+  background: url(https://images.unsplash.com/photo-1447703693928-9cd89c8d3ac5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c2371a2fa9e3e2b5fc2c80c02ce48f9e&auto=format&fit=crop&w=1951&q=80) center center/cover no-repeat; }
+
+header {
+  grid-area: 1 / 1 / 4 / 2;
+  border-right: 1px solid #424242; }
+  header .header-content {
+    width: 100%;
+    height: 10rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: .8rem;
+    text-align: center; }
+    header .header-content ul {
+      margin-bottom: 1rem; }
+
+.slide {
+  grid-area: 1 / 6 / 4 / 7; }
+  .slide-content {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: .9rem;
+    letter-spacing: 0.2rem; }
+
+.navigation {
+  grid-area: 2/6/3/7; }
+  .navigation-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .navigation-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 2rem;
+    transition: 300ms ease-in-out;
+    cursor: pointer; }
+    .navigation-icon svg {
+      fill: #fff;
+      width: 1.5rem;
+      height: 1.5rem;
+      vertical-align: middle; }
+    .navigation-icon:hover {
+      background: #424242; }
+
+footer {
+  grid-area: 3 / 1 / 4 / 7;
+  position: relative; }
+  footer .footer-content {
+    position: absolute;
+    width: 100%;
+    height: 6rem;
+    background: #161616;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 10rem repeat(4, 1fr) 10rem;
+    z-index: 2; }
+    footer .footer-content ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      color: #fff;
+      border-right: 1px solid #424242;
+      font-size: .9rem;
+      letter-spacing: 0.2rem;
+      transition: 300ms ease-in-out;
+      cursor: pointer; }
+      footer .footer-content ul:hover {
+        background: white;
+        letter-spacing: 0.22rem;
+        color: #161616; }
+    footer .footer-content :last-child {
+      border: none; }
+    footer .footer-content :last-child,
+    footer .footer-content :first-child {
+      cursor: default; }
+      footer .footer-content :last-child:hover,
+      footer .footer-content :first-child:hover {
+        background: #161616; }
+
+.main-content {
+  width: 100%;
+  grid-area: 2 / 2 / 3 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2; }
+  .main-content .content-category {
+    width: 33.2%;
+    height: 2rem;
+    background: #161616;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase; }
+  .main-content .content-title {
+    width: 100%;
+    height: 10rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    text-transform: uppercase; }
+  .main-content .content-button {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 300ms ease-in-out; }
+    .main-content .content-button:hover {
+      background: #fff;
+      color: #161616; }
+
+.column-2 {
+  grid-area: 1 / 2 / 4 / 3;
+  border-right: 1px solid #424242;
+  z-index: 1;
+  opacity: .2; }
+
+.too-small {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: .5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0; }
+
+@media screen and (max-width: 1024px) {
+  .too-small {
+    opacity: 1;
+    visibility: visible;
+    letter-spacing: .25rem; } }
+
+/*# sourceMappingURL=style.css.map */
